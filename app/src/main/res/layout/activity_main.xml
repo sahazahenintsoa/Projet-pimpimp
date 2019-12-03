@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rootRelView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <com.view.slidinguppanel.SlidingUpPanelLayout
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            app:umanoDragView="@+id/dragView"
+            app:umanoInitialState="collapsed"
+            app:umanoOverlay="true"
+            app:umanoPanelHeight="100dp"
+            app:umanoParallaxOffset="0dp"
+            app:umanoShadowHeight="0dp">
+
+            <RelativeLayout
+                android:id="@+id/mainArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize">
+
+                    <fragment
+                        android:id="@+id/mapV2"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/locationMarker"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="42dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/pinImgView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/selectSourceLocArea"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/pin_source_select" />
+
+                        <LinearLayout
+                            android:id="@+id/selectSourceLocArea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="-15dp"
+                            android:background="@drawable/bg_select_source_area"
+                            android:orientation="horizontal">
+
+                            <com.view.MTextView
+                                android:id="@+id/pickUpLocTimeTxt"
+                                android:layout_width="40dip"
+                                android:layout_height="40dip"
+                                android:layout_gravity="start|center_vertical"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/bg_time_loc_select"
+                                android:gravity="center"
+                                android:text="--"
+                                android:textColor="@color/appThemeColor_TXT_1"
+                                android:textSize="14sp" />
+
+                            <com.view.MTextView
+                                android:id="@+id/pickUpLocLabelTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_vertical"
+                                android:drawableEnd="@mipmap/ic_right_pickup_arrow"
+                                android:drawablePadding="1dp"
+                                android:gravity="center"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:text="Set Pickup Location"
+                                android:textColor="@color/appThemeColor_TXT_1"
+                                android:textSize="@dimen/txt_size_16" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/locMapBtnArea"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="bottom|start"
+                        android:layout_gravity="bottom|start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginBottom="190dp"
+                            android:id="@+id/userLocBtnImgView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="start"
+                            android:src="@mipmap/ic_my_location" />
+
+
+                        <ImageView
+                            android:layout_marginBottom="190dp"
+                            android:id="@+id/changeMapTypImgView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="start"
+                            android:src="@mipmap/ic_map_type" />
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/deliveryArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        android:layout_marginBottom="100dp"
+                        android:background="#FFFFFF"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rideArea"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+
+                            <ImageView
+                                android:id="@+id/rideImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitEnd"
+                                android:adjustViewBounds="true"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/ride_on" />
+
+                            <com.view.MTextView
+                                android:id="@+id/rideTxt"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="RIDE"
+                                android:textAllCaps="true"
+                                android:textColor="@color/appThemeColor_TXT_1"
+                                android:textSize="@dimen/txt_size_16" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/deliverArea"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:adjustViewBounds="true"
+                                android:id="@+id/deliverImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitStart"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/delivery_off" />
+
+                            <com.view.MTextView
+                                android:id="@+id/deliverTxt"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="DELIVER"
+                                android:textAllCaps="true"
+                                android:textColor="#A2A2A2"
+                                android:textSize="@dimen/txt_size_16" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/headerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ProgressBar
+                    android:id="@+id/LoadingMapProgressBar"
+                    style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/emeTapImgView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/headerContainer"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_emergency"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dragView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent" />
+
+        </com.view.slidinguppanel.SlidingUpPanelLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/left_linear"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/appThemeColor_Dark_1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header_area"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="@color/appThemeColor_2">
+
+            <com.view.SelectableRoundedImageView
+                android:id="@+id/userImgView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:scaleType="centerCrop"
+                app:sriv_border_color="@color/appThemeColor_TXT_1"
+                app:sriv_border_width="2dip"
+                app:sriv_left_bottom_corner_radius="20dip"
+                app:sriv_left_top_corner_radius="20dip"
+                app:sriv_oval="true"
+                app:sriv_right_bottom_corner_radius="20dip"
+                app:sriv_right_top_corner_radius="20dip" />
+
+            <com.view.MTextView
+                android:id="@+id/userNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/userImgView"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="viewStart"
+                android:textAllCaps="true"
+                android:textColor="@color/appThemeColor_TXT_1"
+                android:textSize="@dimen/txt_size_18" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/menuListView"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:paddingTop="10dp" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

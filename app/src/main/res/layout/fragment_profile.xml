@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fragments.ProfileFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/nameArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/fNameBox"
+                layout="@layout/editbox_form_design"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/lNameBox"
+                layout="@layout/editbox_form_design"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/emailBox"
+            layout="@layout/editbox_form_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+
+        <include
+            android:id="@+id/mobileBox"
+            layout="@layout/editbox_form_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+
+        <include
+            android:id="@+id/langBox"
+            layout="@layout/editbox_form_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+
+        <include
+            android:id="@+id/currencyBox"
+            layout="@layout/editbox_form_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+
+        <com.view.MTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="PLACES"
+            android:textAlignment="viewStart"
+            android:textColor="@color/editBox_primary"
+            android:textSize="@dimen/txt_size_16" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_home"
+                android:gravity="start|center_vertical"
+                android:textAlignment="viewStart"
+                android:tint="@color/appThemeColor_1"
+                />
+
+            <com.view.MTextView
+                android:id="@+id/homePlaceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:text="Add Home"
+                android:textAlignment="viewStart"
+                android:textColor="#2F2F2F"
+                android:textSize="@dimen/txt_size_16" />
+
+        </LinearLayout>
+
+      <!--  <com.view.MTextView
+            android:id="@+id/homePlaceTxt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@mipmap/ic_home"
+            android:gravity="start|center_vertical"
+            android:text="Add Home"
+            android:textAlignment="viewStart"
+            android:textColor="#2F2F2F"
+            android:textSize="@dimen/txt_size_16" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D4D4D4" />
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_work"
+                android:gravity="start|center_vertical"
+                android:textAlignment="viewStart"
+                android:tint="@color/appThemeColor_1"
+                />
+
+            <com.view.MTextView
+                android:id="@+id/workPlaceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:text="Add Work"
+                android:textAlignment="viewStart"
+                android:textColor="#2F2F2F"
+                android:textSize="@dimen/txt_size_16" />
+
+        </LinearLayout>
+
+     <!--   <com.view.MTextView
+            android:id="@+id/workPlaceTxt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:drawableStart="@mipmap/ic_work"
+            android:gravity="start|center_vertical"
+            android:text="Add Work"
+            android:textAlignment="viewStart"
+            android:textColor="#2F2F2F"
+            android:textSize="@dimen/txt_size_16" />-->
+
+    </LinearLayout>
+</LinearLayout>

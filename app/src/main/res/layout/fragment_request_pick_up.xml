@@ -1,0 +1,221 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+    tools:context="com.fragments.RequestPickUpFragment">
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/below_shadow"
+        android:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+          <LinearLayout
+              android:id="@+id/cardArea"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="90dp"
+                  android:layout_marginEnd="5dp"
+                  android:layout_marginStart="5dp"
+                  android:paddingTop="10dp"
+                  android:paddingBottom="10dp"
+                  android:orientation="horizontal">
+
+                  <LinearLayout
+                      android:id="@+id/paymentArea"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:orientation="vertical">
+
+                      <ImageView
+                          android:id="@+id/payImgView"
+                          android:layout_width="75dp"
+                          android:layout_height="45dp"
+                          android:padding="10dp"
+                          android:layout_gravity="center_horizontal"
+                          android:src="@mipmap/ic_cash_new" />
+
+                      <com.view.MTextView
+                          android:id="@+id/payTypeTxt"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="5dp"
+                          android:gravity="center"
+                          android:text="Cash"
+                          android:textColor="#2f2f2f"
+                          android:textSize="@dimen/txt_size_16" />
+                  </LinearLayout>
+
+                  <View
+                      android:layout_width="1dp"
+                      android:layout_height="match_parent"
+                      android:layout_margin="5dp"
+                      android:layout_weight="0"
+                      android:background="#C6C6C6" />
+
+                  <LinearLayout
+                      android:id="@+id/fareEstArea"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:orientation="vertical">
+
+                      <ImageView
+                          android:layout_width="45dp"
+                          android:layout_height="45dp"
+                          android:padding="10dp"
+                          android:layout_gravity="center_horizontal"
+                          android:src="@mipmap/ic_fare_est" />
+
+                      <com.view.MTextView
+                          android:id="@+id/fareEstTxt"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="5dp"
+                          android:gravity="center"
+                          android:text="Fare Estimate"
+                          android:textColor="#2f2f2f"
+                          android:textSize="@dimen/txt_size_16" />
+
+                  </LinearLayout>
+
+                  <View
+                      android:id="@+id/promoSeperationLine"
+                      android:layout_width="1dp"
+                      android:layout_height="match_parent"
+                      android:layout_margin="5dp"
+                      android:layout_weight="0"
+                      android:background="#C6C6C6" />
+
+                  <LinearLayout
+                      android:id="@+id/promoArea"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:orientation="vertical">
+
+                      <ImageView
+                          android:layout_width="81dp"
+                          android:layout_height="45dp"
+                          android:padding="10dp"
+                          android:layout_gravity="center_horizontal"
+                          android:src="@mipmap/ic_promo" />
+
+                      <com.view.MTextView
+                          android:id="@+id/promoTxt"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="5dp"
+                          android:gravity="center"
+                          android:text="Promo"
+                          android:textColor="#2f2f2f"
+                          android:textSize="@dimen/txt_size_16" />
+                  </LinearLayout>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:visibility="gone"
+                  android:id="@+id/payTypeSelectArea"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="#F2F2F2"
+                  android:orientation="vertical"
+                  android:paddingBottom="10dp"
+                  android:paddingEnd="15dp"
+                  android:paddingStart="15dp"
+                  android:paddingTop="10dp">
+
+                  <RadioGroup
+                      android:id="@+id/paymentTypeRadioGroup"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+                      <RadioButton
+                          android:id="@+id/walletRadioBtn"
+                          android:layout_width="match_parent"
+                          android:layout_height="48dp"
+                          android:background="#FFFFFF"
+                          android:checked="true"
+                          android:text="Wallet"
+                          android:textColor="#2F2F2F"
+                          android:textSize="@dimen/txt_size_16" />
+
+                      <RadioButton
+                          android:layout_marginTop="10dp"
+                          android:id="@+id/cashRadioBtn"
+                          android:layout_width="match_parent"
+                          android:layout_height="48dp"
+                          android:background="#FFFFFF"
+                          android:checked="false"
+                          android:text="Cash"
+                          android:textColor="#2F2F2F"
+                          android:textSize="@dimen/txt_size_16" />
+
+                      <RadioButton
+                          android:id="@+id/cardRadioBtn"
+                          android:layout_width="match_parent"
+                          android:layout_height="48dp"
+                          android:layout_marginTop="10dp"
+                          android:background="#FFFFFF"
+                          android:text="Card"
+                          android:textColor="#2F2F2F"
+                          android:textSize="@dimen/txt_size_16" />
+
+
+                  </RadioGroup>
+              </LinearLayout>
+
+              <android.support.v7.widget.RecyclerView
+                  android:id="@+id/reqPickUpRecyclerView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="100dp"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginEnd="5dp"
+                  android:layout_marginStart="5dp"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal"
+                  android:visibility="gone"
+                  app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+          </LinearLayout>
+            <LinearLayout
+                android:id="@+id/reqBtnArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include
+                    android:id="@+id/btn_type2"
+                    layout="@layout/btn_type_2"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_height="@dimen/all_btn_height"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#F5F5F5">
+
+        <LinearLayout
+            android:id="@+id/contentArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:id="@+id/detailExpandArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/arrowImg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_arrow_down" />
+
+
+                <com.view.MTextView
+                    android:id="@+id/transactiondateTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:text="25th may,2016"
+                    android:textAlignment="viewStart"
+                    android:textColor="#8F8F8F"
+                    android:textSize="@dimen/txt_size_14" />
+
+
+                <com.view.MTextView
+                    android:id="@+id/transactionBalTypeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:text="Transaction "
+                    android:textAlignment="viewEnd"
+                    android:textColor="#2F2F2F"
+                    android:textSize="@dimen/txt_size_18" />
+
+                <com.view.MTextView
+                    android:id="@+id/tranasctionBalVTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:maxLines="1"
+                    android:text="4545454"
+                    android:textColor="#8F8F8F"
+                    android:textSize="@dimen/txt_size_16" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/transactionDetailArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.view.MTextView
+                        android:id="@+id/transactionNoTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="top|start|center"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/txt_size_16" />
+
+                    <com.view.MTextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/transactionNoVTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="top|start|center"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textColor="#8F8F8F"
+                        android:textSize="@dimen/txt_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.view.MTextView
+                        android:id="@+id/transactionTypeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="top|start|center"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/txt_size_16" />
+
+                    <com.view.MTextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/transactionTypeVTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="top|start|center"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textColor="#8F8F8F"
+                        android:textSize="@dimen/txt_size_16" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.view.MTextView
+                        android:id="@+id/transactionDesTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="top|start|center"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/txt_size_16" />
+
+                    <com.view.MTextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/transactionDesVTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="top|start|center"
+                        android:maxLines="3"
+                        android:minLines="1"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textColor="#8F8F8F"
+                        android:textSize="@dimen/txt_size_16" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.view.MTextView
+                        android:id="@+id/tranasctionAmountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="top|start|center"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/txt_size_16" />
+
+                    <com.view.MTextView
+                        android:id="@+id/tranasctionAmountVTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="top|start|center"
+                        android:maxLines="2"
+                        android:text=""
+                        android:layout_marginLeft="5dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="#8F8F8F"
+                        android:textSize="@dimen/txt_size_16" />
+
+                </LinearLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E3E3E3" />
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.view.MTextView
+                        android:id="@+id/paymentStatusHTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="top|start|center"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="viewStart"
+
+                        android:textColor="#000000"
+                        android:textSize="@dimen/txt_size_16" />
+
+                    <com.view.MTextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/paymentStatusVTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:gravity="top|start|center"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textColor="#8F8F8F"
+                        android:textSize="@dimen/txt_size_16" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

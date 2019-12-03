@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#F5F5F5">
+
+        <LinearLayout
+            android:id="@+id/contentArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.view.MTextView
+                        android:id="@+id/myBookingNoHTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="Booking#"
+                        android:textColor="#2E2E2E"
+                        android:textSize="@dimen/txt_size_18" />
+
+                    <com.view.MTextView
+                        android:id="@+id/myBookingNoVTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:maxLines="1"
+                        android:text="4545454"
+                        android:textColor="@color/appThemeColor_2"
+                        android:textSize="@dimen/txt_size_16" />
+                </LinearLayout>
+
+                <com.view.MTextView
+                    android:id="@+id/dateTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:text="25th may,2016"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#8F8F8F"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <com.view.MTextView
+                android:id="@+id/sourceAddressTxt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_from_point"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:text="Source address"
+                android:textAlignment="viewStart"
+                android:textColor="#8F8F8F"
+                android:textSize="@dimen/txt_size_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="55dp"
+                android:background="#E3E3E3" />
+
+            <com.view.MTextView
+                android:id="@+id/destAddressTxt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_to_point"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:text="Dest address"
+                android:textAlignment="viewStart"
+                android:textColor="#8F8F8F"
+                android:textSize="@dimen/txt_size_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/statusArea"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.view.MTextView
+                        android:id="@+id/statusHTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Status"
+                        android:textColor="@color/appThemeColor_Dark_1"
+                        android:textSize="@dimen/txt_size_18" />
+
+                    <com.view.MTextView
+                        android:id="@+id/statusVTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:maxLines="1"
+                        android:text="Cancelled"
+                        android:textColor="@color/appThemeColor_1"
+                        android:textSize="@dimen/txt_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cancelBookingArea"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/ic_cancel_trip"
+                        android:visibility="gone" />
+
+                    <com.view.MTextView
+                        android:id="@+id/cancelBookingTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:maxLines="1"
+                        android:text="Cancel Booking"
+                        android:textColor="#2f2f2f"
+                        android:textSize="@dimen/txt_size_16" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

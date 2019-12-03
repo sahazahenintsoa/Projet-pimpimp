@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/contentArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.view.MTextView
+            android:id="@+id/carTypeTitle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="#BABABA"
+            android:textSize="@dimen/txt_size_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/leftSeperationLine"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#BABABA" />
+
+            <View
+                android:id="@+id/rightSeperationLine"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#BABABA" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_centerInParent="true"
+            android:layout_below="@id/carTypeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <com.view.SelectableRoundedImageView
+            android:id="@+id/carTypeImgView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/carTypeTitle"
+            android:scaleType="centerCrop"
+            app:sriv_border_width="1dp"
+            app:sriv_left_bottom_corner_radius="30dip"
+            app:sriv_left_top_corner_radius="30dip"
+            app:sriv_right_bottom_corner_radius="30dip"
+            app:sriv_right_top_corner_radius="30dip"
+            app:sriv_oval="true" />
+
+
+            <com.view.anim.loader.AVLoadingIndicatorView
+                android:id="@+id/loaderView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:visibility="gone"
+                app:indicator="BallPulse"
+                android:layout_gravity="center"
+                app:indicator_color="@color/appThemeColor_2" />
+
+        </FrameLayout>
+        <!--<com.view.NetworkRoundedImageView
+            android:id="@+id/carTypeImgView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/carTypeTitle"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF" />-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
